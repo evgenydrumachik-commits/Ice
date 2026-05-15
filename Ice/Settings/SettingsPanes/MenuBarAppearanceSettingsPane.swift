@@ -14,7 +14,9 @@ struct MenuBarAppearanceSettingsPane: View {
     }
 }
 
+#if canImport(PreviewsMacros)
 #Preview {
     MenuBarAppearanceSettingsPane()
         .environmentObject(AppState())
 }
+#endif

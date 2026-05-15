@@ -15,7 +15,7 @@ struct AboutSettingsPane: View {
 
     private var acknowledgementsURL: URL {
         // swiftlint:disable:next force_unwrapping
-        Bundle.main.url(forResource: "Acknowledgements", withExtension: "pdf")!
+        IceResourceLocator.resourceBundle.url(forResource: "Acknowledgements", withExtension: "pdf")!
     }
 
     private var contributeURL: URL {

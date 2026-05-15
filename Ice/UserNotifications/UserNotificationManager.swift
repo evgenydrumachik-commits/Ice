@@ -58,7 +58,8 @@ final class UserNotificationManager: NSObject {
 }
 
 // MARK: UserNotificationManager: UNUserNotificationCenterDelegate
-extension UserNotificationManager: @preconcurrency UNUserNotificationCenterDelegate {
+@MainActor
+extension UserNotificationManager: UNUserNotificationCenterDelegate {
     func userNotificationCenter(
         _ center: UNUserNotificationCenter,
         didReceive response: UNNotificationResponse,

@@ -357,12 +357,21 @@ private struct SettingsButton: View {
 
     var body: some View {
         BottomBarButton(action: action) {
-            Image(.iceCubeStroke)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 18, height: 18)
-                .foregroundStyle(.secondary)
-                .padding(2)
+            if let image = IceResourceLocator.nsImage(named: "IceCubeStroke") {
+                Image(nsImage: image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 18, height: 18)
+                    .foregroundStyle(.secondary)
+                    .padding(2)
+            } else {
+                Image(systemName: "snowflake")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 18, height: 18)
+                    .foregroundStyle(.secondary)
+                    .padding(2)
+            }
         }
     }
 }

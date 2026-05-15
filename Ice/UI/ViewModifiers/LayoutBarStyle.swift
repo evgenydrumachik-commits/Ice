@@ -33,7 +33,7 @@ extension View {
                         )
                 }
             } else {
-                Color.defaultLayoutBar
+                Color(nsColor: .windowBackgroundColor)
             }
         }
         .overlay {

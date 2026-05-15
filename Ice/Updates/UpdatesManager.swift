@@ -92,18 +92,12 @@ final class UpdatesManager: NSObject, ObservableObject {
 }
 
 // MARK: UpdatesManager: SPUUpdaterDelegate
-extension UpdatesManager: @preconcurrency SPUUpdaterDelegate {
-    func updater(_ updater: SPUUpdater, willScheduleUpdateCheckAfterDelay delay: TimeInterval) {
-        guard let appState else {
-            return
-        }
-        appState.userNotificationManager.requestAuthorization()
-    }
-}
+extension UpdatesManager: SPUUpdaterDelegate { }
 
 // MARK: UpdatesManager: SPUStandardUserDriverDelegate
-extension UpdatesManager: @preconcurrency SPUStandardUserDriverDelegate {
-    var supportsGentleScheduledUpdateReminders: Bool { true }
+@MainActor
+extension UpdatesManager: SPUStandardUserDriverDelegate {
+    var supportsGentleScheduledUpdateReminders: Bool { false }
 
     func standardUserDriverShouldHandleShowingScheduledUpdate(
         _ update: SUAppcastItem,
@@ -120,25 +114,7 @@ extension UpdatesManager: @preconcurrency SPUStandardUserDriverDelegate {
         _ handleShowingUpdate: Bool,
         forUpdate update: SUAppcastItem,
         state: SPUUserUpdateState
-    ) {
-        guard let appState else {
-            return
-        }
-        if !state.userInitiated {
-            appState.userNotificationManager.addRequest(
-                with: .updateCheck,
-                title: "A new update is available",
-                body: "Version \(update.displayVersionString) is now available"
-            )
-        }
-    }
-
-    func standardUserDriverDidReceiveUserAttention(forUpdate update: SUAppcastItem) {
-        guard let appState else {
-            return
-        }
-        appState.userNotificationManager.removeDeliveredNotifications(with: [.updateCheck])
-    }
+    ) { }
 }
 
 // MARK: UpdatesManager: BindingExposable

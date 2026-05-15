@@ -402,6 +402,19 @@ extension NSBezierPath {
 // MARK: - NSImage
 
 extension NSImage {
+    static var warning: NSImage {
+        if let image = IceResourceLocator.nsImage(named: "Warning") {
+            return image
+        }
+
+        let fallback = NSImage(
+            systemSymbolName: "exclamationmark.triangle.fill",
+            accessibilityDescription: nil
+        ) ?? NSImage(size: CGSize(width: 16, height: 16))
+        fallback.isTemplate = true
+        return fallback
+    }
+
     /// Returns a new image that has been resized to the given size.
     ///
     /// - Note: This method retains the ``isTemplate`` property.

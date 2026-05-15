@@ -168,8 +168,10 @@ struct AdvancedSettingsPane: View {
     }
 }
 
+#if canImport(PreviewsMacros)
 #Preview {
     AdvancedSettingsPane()
         .fixedSize()
         .environmentObject(AppState())
 }
+#endif
