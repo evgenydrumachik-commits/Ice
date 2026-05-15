@@ -20,7 +20,7 @@ final class UpdatesManager: NSObject, ObservableObject {
 
     /// The underlying updater controller.
     private(set) lazy var updaterController = SPUStandardUpdaterController(
-        startingUpdater: true,
+        startingUpdater: false,
         updaterDelegate: self,
         userDriverDelegate: self
     )
@@ -62,6 +62,9 @@ final class UpdatesManager: NSObject, ObservableObject {
     func performSetup() {
         _ = updaterController
         configureCancellables()
+        // Keep Sparkle dormant at launch so it never presents the automatic-update
+        // permission prompt. Manual checks start the updater on demand instead.
+        canCheckForUpdates = true
     }
 
     /// Configures the internal observers for the manager.
@@ -86,6 +89,7 @@ final class UpdatesManager: NSObject, ObservableObject {
         // Activate the app in case an alert needs to be displayed.
         appState.activate(withPolicy: .regular)
         appState.openSettingsWindow()
+        updaterController.startUpdater()
         updater.checkForUpdates()
         #endif
     }

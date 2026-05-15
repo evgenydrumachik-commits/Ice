@@ -27,14 +27,27 @@ struct MenuBarLayoutSettingsPane: View {
             .font(.title2)
 
         IceGroupBox {
-            AnnotationView(
-                alignment: .center,
-                font: .callout.bold()
-            ) {
-                Label {
-                    Text("Tip: you can also arrange menu bar items by Command + dragging them in the menu bar")
-                } icon: {
-                    Image(systemName: "lightbulb")
+            VStack(alignment: .leading, spacing: 10) {
+                AnnotationView(
+                    alignment: .center,
+                    font: .callout.bold()
+                ) {
+                    Label {
+                        Text("Drag icons between the Visible, Hidden, and Always-Hidden sections below to move them in and out of Ice")
+                    } icon: {
+                        Image(systemName: "arrow.left.arrow.right.square")
+                    }
+                }
+
+                AnnotationView(
+                    alignment: .center,
+                    font: .callout.bold()
+                ) {
+                    Label {
+                        Text("Tip: you can also arrange menu bar items by Command + dragging them directly in the menu bar")
+                    } icon: {
+                        Image(systemName: "lightbulb")
+                    }
                 }
             }
         }
