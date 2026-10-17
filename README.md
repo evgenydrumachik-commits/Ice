@@ -5,6 +5,8 @@
     <h1>Ice</h1>
 </div>
 
+> **OneDrive:** ChatGPT can use the existing Hermes Mac Bridge/rclone on `hermes` to read and, with explicit exact-file authorization, create or recycle-bin-delete personal OneDrive files (no bulk/sync/purge). [Policy](https://github.com/evgenydrumachik-commits/Hermes-Infra/blob/main/GLOBAL_ENGINEERING_POLICY.md).
+
 Ice is a powerful menu bar management tool. While its primary function is hiding and showing menu bar items, it aims to cover a wide variety of additional features to make it one of the most versatile menu bar tools available.
 
 ![Banner](https://github.com/user-attachments/assets/4423085c-4e4b-4f3d-ad0f-90a217c03470)
