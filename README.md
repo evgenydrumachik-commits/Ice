@@ -1,11 +1,11 @@
 <div align="center">
 
-> **AI coding default (D-053, 2026-10-16):** **Copilot and Codex both use GPT-6 Luna / native MAX** unless the owner explicitly specifies a different model/effort for that task. **No automatic Sol/high, Sonnet, GPT-5.6, or weaker-effort fallback.** Agent instructions: [AGENTS.md](AGENTS.md); [canonical policy](https://github.com/evgenydrumachik-commits/Hermes-Infra/blob/main/GLOBAL_ENGINEERING_POLICY.md).
+> **AI coding default (D-053, 2026-10-16):** **Copilot and Codex both use GPT-6 Luna / native MAX** unless the owner explicitly specifies a different model/effort for that task. **No automatic Sol/high, Sonnet, GPT-5.6, or weaker-effort fallback.** Agent instructions: [AGENTS.md](AGENTS.md); [canonical shared model policy](https://github.com/evgenydrumachik-commits/Home/blob/main/policies/models-and-routing.md); consult Hermes Global only for Hermes-owned route or runtime mechanics.
     <img src="Ice/Assets.xcassets/AppIcon.appiconset/icon_256x256.png" width=200 height=200>
     <h1>Ice</h1>
 </div>
 
-> **OneDrive:** ChatGPT can use the existing Hermes Mac Bridge/rclone on `hermes` to read and, with explicit exact-file authorization, create or recycle-bin-delete personal OneDrive files (no bulk/sync/purge). [Policy](https://github.com/evgenydrumachik-commits/Hermes-Infra/blob/main/GLOBAL_ENGINEERING_POLICY.md).
+> **OneDrive:** ChatGPT can use the existing Hermes Mac Bridge/rclone on `hermes` to read and, with explicit exact-file authorization, create or recycle-bin-delete personal OneDrive files (no bulk/sync/purge). [shared permissions](https://github.com/evgenydrumachik-commits/Home/blob/main/policies/risk-and-permissions.md) and [Hermes route mechanics](https://github.com/evgenydrumachik-commits/Hermes-Infra/blob/main/GLOBAL_ENGINEERING_POLICY.md).
 
 Ice is a powerful menu bar management tool. While its primary function is hiding and showing menu bar items, it aims to cover a wide variety of additional features to make it one of the most versatile menu bar tools available.
 
