@@ -2,14 +2,9 @@
 
 # Agent instructions for Ice
 
-## Canonical Home shared governance
+## Home pointer for owner-authorized work
 
-Home at `evgenydrumachik-commits/Home` is the sole authored source for shared governance. At task start, resolve its authorized private `refs/heads/main` read route to a full commit SHA. Read `BOOTSTRAP.md`, `policies/core.md`, and applicable shared policy/domain modules at that SHA; verify every decoded file against its Git blob SHA and record SHA-256; then resolve `main` again. Use the snapshot only if the before/after refs match. This read is independent of any Hermes Steward Issue/PR inventory. Do not copy private Home policy bytes or catalogs into this public repository.
-
-If current Home cannot be read or changes during the read, report the exact narrow result and continue only independent work. Before making a broad claim that a system or action is unavailable, check at least three materially different authorized avenues when available and keep working while another safe route or owner-controlled repair remains. An explicit OS/tool/platform denial closes that route immediately; never repeat it, guess credentials, or bypass a control. If fewer than three legitimate paths exist, name the blocked objective, checked paths, and verified boundary.
-
-Home governs shared behavior subject to higher-priority and platform controls. Ice retains its product purpose, implementation, and upstream contribution conventions. A link or old cache is not proof of a current policy read.
-
+For owner-authorized tasks with existing authorized private access, follow current shared guidance in [Home](https://github.com/evgenydrumachik-commits/Home), starting with its `BOOTSTRAP.md` and applicable modules before dependent work. This public repository stores a pointer only, not Home policy text. Public contributors have no implied Home access; if current Home is unavailable, keep local Ice and upstream contribution instructions in force and do not claim Home was read.
 
 > **Portfolio policy (owner decision D-045):** For engineering work in this owner-controlled repository, read current Home governance through the loader above. Home remains the canonical shared source; retain these local compatibility requirements until this client’s actual Home read is verified. The default workflow is **FAST** (rapid reversible changes, no blanket Issue/PR/review), with **CAREFUL** for material safety/data/irreversibility risks. **FAST is never the Codex product Fast option.** Coding: GPT-6 Luna/native MAX; UI/UX design: non-default models only when explicitly requested by the owner for this task. T3 first, safe automatic fallback. Docs-only may commit directly without PR when the active task route and GitHub policy allow it. Preserve Ice-specific build and upstream contribution conventions.
 
